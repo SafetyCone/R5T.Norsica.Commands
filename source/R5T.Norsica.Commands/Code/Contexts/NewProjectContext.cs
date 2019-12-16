@@ -3,7 +3,7 @@
 
 namespace R5T.Norsica.Commands
 {
-    public class NewSlnContext
+    public class NewProjectContext
     {
     }
 }
