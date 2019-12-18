@@ -4,9 +4,9 @@
 namespace R5T.Norsica.Commands
 {
     /// <summary>
-    /// Context for the dotnet new verb.
+    /// Context indicating that a command is finished.
     /// </summary>
-    public class NewContext
+    public class FinishedContext
     {
     }
 }
