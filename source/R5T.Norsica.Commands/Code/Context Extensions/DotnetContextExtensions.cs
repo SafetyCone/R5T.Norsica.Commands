@@ -29,5 +29,19 @@ namespace R5T.Norsica.Commands
             var slnSpecifiedContext = dotnetContext.Sln().SetSolutionFile(solutionFilePath);
             return slnSpecifiedContext;
         }
+
+        public static ICommandBuilderContext<PublishContext> Publish(this ICommandBuilderContext<DotnetContext> dotnetContext)
+        {
+            dotnetContext.Append("publish");
+
+            var publishContext = dotnetContext.ChangeContext<PublishContext>();
+            return publishContext;
+        }
+
+        public static ICommandBuilderContext<PublishContext> Publish(this ICommandBuilderContext<DotnetContext> dotnetContext, string projectFilePath)
+        {
+            var publishContext = dotnetContext.Publish().SetProjectFile(projectFilePath);
+            return publishContext;
+        }
     }
 }
